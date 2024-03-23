@@ -5,13 +5,13 @@ static const unsigned int borderpx  = 3;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "Liberation Serif:size=9" };
-static const char dmenufont[]       = "Liberation Serif:size=9";
+static const char *fonts[]          = { "Liberation Serif:size=10" };
+static const char dmenufont[]       = "Liberation Serif:size=10";
 
 #include "/home/Saatwat/.cache/wal/colors-wal-dwm.h"
 
 /* tagging */
-static const char *tags[] = { "१", "२", "३", "४", "५", "६", "७", "८", "९" };
+static const char *tags[] = { "", " ", "", " ", " ", " ", " ", "", " " };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -51,11 +51,13 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, NULL };
 static const char *termcmd[]  = { "st", NULL };
+static const char *lockcmd[]  = { "slock", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
-	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
-	{ MODKEY,               XK_semicolon,      spawn,          {.v = termcmd } },
+	{ MODKEY,              XK_semicolon,       spawn,          {.v = dmenucmd } },
+	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
+     { MODKEY|ShiftMask,             XK_l,      spawn,          {.v = lockcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
@@ -80,8 +82,8 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
-	TAGKEYS(                        XK_4,                      3)
-	TAGKEYS(                        XK_5,                      4)
+	TAGKEYS(                        XK_                    3)
+	TAGKEYS(                        XK_5,
 	TAGKEYS(                        XK_6,                      5)
 	TAGKEYS(                        XK_7,                      6)
 	TAGKEYS(                        XK_8,                      7)
