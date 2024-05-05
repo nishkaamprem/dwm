@@ -11,7 +11,7 @@ static const char dmenufont[]       = "Liberation Serif:size=10";
 #include "/home/Saatwat/.cache/wal/colors-wal-dwm.h"
 
 /* tagging */
-static const char *tags[] = { "", " ", "", " ", " ", " ", " ", "", " " };
+static const char *tags[] = { " ", " ", "", " ", " ", " ", " ", "", " " };
 
 static const Rule rules[] = {
 	/* xprop(1):
