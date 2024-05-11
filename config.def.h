@@ -5,13 +5,13 @@ static const unsigned int borderpx  = 3;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "Liberation Serif:size=10" };
-static const char dmenufont[]       = "Liberation Serif:size=10";
+static const char *fonts[]          = { "Liberation Serif:size=9" };
+static const char dmenufont[]       = "Liberation Serif:size=9";
 
 #include "/home/Saatwat/.cache/wal/colors-wal-dwm.h"
 
 /* tagging */
-static const char *tags[] = { " ", " ", "", " ", " ", " ", " ", "", " " };
+static const char *tags[] = { " ", " ", " ", " ", " ", " ", "", " " };
 
 static const Rule rules[] = {
 	/* xprop(1):
