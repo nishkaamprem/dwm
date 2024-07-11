@@ -5,8 +5,8 @@ static const unsigned int borderpx  = 3;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "monospace:size=10" };
-static const char dmenufont[]       = "monospace:size=10";
+static const char *fonts[]          = { "monospace:size=9.5" };
+static const char dmenufont[]       = "monospace:size=9";
 
 #include "/home/Saatwat/.cache/wal/colors-wal-dwm.h"
 
@@ -55,9 +55,9 @@ static const char *lockcmd[]  = { "slock", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
-	{ MODKEY,              XK_semicolon,       spawn,          {.v = dmenucmd } },
+	{ MODKEY,              XK_semicolon,       spawn,          {.v = dmenucmd }},
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
-     { MODKEY|ShiftMask,             XK_s,      spawn,          {.v = lockcmd } },
+     { MODKEY|ControlMask,           XK_l,      spawn,          {.v = lockcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
