@@ -55,7 +55,7 @@ static const char *lockcmd[]  = { "slock", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
-	{ MODKEY,              XK_semicolon,       spawn,          {.v = dmenucmd }},
+	{ MODKEY,                    XK_semicolon, spawn,          {.v = dmenucmd }},
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
      { MODKEY|ControlMask,           XK_l,      spawn,          {.v = lockcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
@@ -65,7 +65,6 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_d,      incnmaster,     {.i = -1 } },
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
-     { MODKEY|ControlMask,		  XK_space,  spawn,	         SHCMD("cycle-keyboard") },
 	{ MODKEY,                       XK_Return, zoom,           {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
 	{ MODKEY,                       XK_x,      killclient,     {0} },
